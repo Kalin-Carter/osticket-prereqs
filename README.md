@@ -31,7 +31,22 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create Azure Virtual Machine
+VM Name: osticket-vm
+Operating System: Windows 10
+vCPUs: 4
+Username: labuser
+Password: osTicketPassword1!
+Use Remote Desktop (RDP) to connect to the VM with the credentials above.
+Download the osTicket-Installation-Files.zip onto the VM.
+Unzip the file to your Desktop.
+Rename the extracted folder to: osTicket-Installation-Files 
+Install and Configure IIS (Web Server)
+Open "Turn Windows features on or off".
+Enable the following:
+Internet Information Services
+Under World Wide Web Services:Application Development Features 
+  CHeck CGI 
 </p>
 <br />
 
