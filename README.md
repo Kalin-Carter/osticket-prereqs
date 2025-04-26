@@ -28,40 +28,39 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+<img width="1728" alt="9A58B889-243B-49B1-B493-3B069A4B4553" src="https://github.com/user-attachments/assets/a5b78147-0425-40a7-9102-32c0087c889e" />
+
+
 <p>
-Create Azure Virtual Machine
-VM Name: osticket-vm
-Operating System: Windows 10
-vCPUs: 4
-Username: labuser
-Password: osTicketPassword1!
-Use Remote Desktop (RDP) to connect to the VM with the credentials above.
-Download the osTicket-Installation-Files.zip onto the VM.
-Unzip the file to your Desktop.
-Rename the extracted folder to: osTicket-Installation-Files 
-Install and Configure IIS (Web Server)
-Open "Turn Windows features on or off".
-Enable the following:
-Internet Information Services
-Under World Wide Web Services:Application Development Features 
-  CHeck CGI 
+Create a Windows 10 VM in Azure named osticket-vm (4 vCPUs, username: labuser, password: osTicketPassword1!) and log in via Remote Desktop. Inside the VM, unzip the osTicket-Installation-Files.zip to your desktop.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1728" alt="19ED2EFE-C2F4-4BE9-9F44-FF24490D445D" src="https://github.com/user-attachments/assets/162c2e51-bc66-45f9-ab3a-b69bad2d5a61" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+Install and enable IIS with CGI, PHP Manager, Rewrite Module, and unzip PHP 7.3.8 to C:\PHP. Install VC_redist, MySQL 5.5.62 (root/root), and register PHP in IIS using PHP Manager.
+
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/48b55380-5579-4787-baf2-3d9f979901b1)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br /># osticket-prereqs
+Unzip osTicket v1.15.8 to C:\inetpub\wwwroot\osTicket, then restart IIS and browse the site. Enable required PHP extensions (imap, intl, opcache) in PHP Manager. Rename ost-sampleconfig.php to ost-config.php, set full permissions for "Everyone", and proceed with the browser setup. </p>
+
+![12E8DC6E-3B2B-4956-9542-F19F2AA5FED0_1_105_c](https://github.com/user-attachments/assets/602493b9-b9be-48bb-859a-2705afda8a33)
+
+
+Create the osTicket database in HeidiSQL, complete the install with MySQL credentials (root/root), and finish setup at http://localhost/osTicket/. Finally, delete the setup folder and set ost-config.php to read-only.
+
+
+
+
