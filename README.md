@@ -21,8 +21,11 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Azure Virtual Machine
 - Internet Information Services (IIS)
-- Item 3
-- Item 4
+- PHP Manager
+- Rewrite Module
+- VC Redist
+- MySQL
+- Heidi SQL
 - osTicket v1.15.8
 
 <h2>Installation Steps</h2>
